@@ -1,0 +1,1844 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shanshan Tian, Ph.D. | 田姗姗 - Associate Chief Pharmacist</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+    --navy-900:#0a192f;
+    --navy-800:#112240;
+    --navy-700:#1a365d;
+    --navy-600:#234975;
+    --navy-500:#2d5a8f;
+    --navy-50:#eff6ff;
+    --slate-900:#0f172a;
+    --slate-800:#1e293b;
+    --slate-700:#334155;
+    --slate-600:#475569;
+    --slate-500:#64748b;
+    --slate-400:#94a3b8;
+    --slate-300:#cbd5e1;
+    --slate-200:#e2e8f0;
+    --slate-100:#f1f5f9;
+    --slate-50:#f8fafc;
+    --gold-500:#b8860b;
+    --gold-400:#d4a437;
+    --gold-300:#e8c87a;
+    --gold-100:#fdf3d9;
+    --gold-50:#faf6e9;
+    --white:#ffffff;
+    --shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.04);
+    --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.06), 0 1px 2px -1px rgb(0 0 0 / 0.06);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.08), 0 2px 4px -2px rgb(0 0 0 / 0.06);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.08), 0 4px 6px -4px rgb(0 0 0 / 0.06);
+    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.08), 0 8px 10px -6px rgb(0 0 0 / 0.05);
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--slate-800);
+    background: var(--slate-50);
+    font-weight: 400;
+}
+.cn { font-family: 'Noto Serif SC', 'Songti SC', 'SimSun', serif; }
+.serif { font-family: 'Cormorant Garamond', 'Noto Serif SC', Georgia, serif; }
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+
+.scroll-progress {
+    position: fixed; top: 0; left: 0; height: 2px; background: linear-gradient(90deg, var(--gold-400), var(--gold-500));
+    z-index: 1001; width: 0%; transition: width 0.1s linear;
+}
+
+nav {
+    position: fixed; top: 0; width: 100%;
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: saturate(180%) blur(14px);
+    -webkit-backdrop-filter: saturate(180%) blur(14px);
+    border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+    z-index: 1000;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+nav.scrolled { box-shadow: var(--shadow-sm); border-bottom-color: rgba(15, 23, 42, 0.08); }
+.nav-container {
+    max-width: 1200px; margin: 0 auto; padding: 0 2rem;
+    display: flex; justify-content: space-between; align-items: center; height: 68px;
+}
+.nav-brand { display: flex; align-items: center; gap: 0.75rem; }
+.nav-monogram {
+    width: 36px; height: 36px;
+    background: var(--navy-700);
+    color: var(--white);
+    display: flex; align-items: center; justify-content: center;
+    border-radius: var(--radius-sm);
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600; font-size: 16px;
+    letter-spacing: -0.5px;
+    position: relative;
+}
+.nav-monogram::after {
+    content: ''; position: absolute; bottom: -2px; right: -2px;
+    width: 8px; height: 8px; background: var(--gold-400);
+    border: 2px solid white; border-radius: 50%;
+}
+.nav-name { display: flex; flex-direction: column; line-height: 1.2; }
+.nav-name-en { font-weight: 600; font-size: 0.9rem; color: var(--slate-900); letter-spacing: -0.2px; }
+.nav-name-cn { font-size: 0.75rem; color: var(--slate-500); }
+
+.nav-right { display: flex; align-items: center; gap: 2rem; }
+.nav-links { display: flex; gap: 0.25rem; list-style: none; }
+.nav-links a {
+    display: inline-flex; align-items: center;
+    padding: 0.4rem 0.85rem;
+    font-size: 0.82rem; font-weight: 500;
+    color: var(--slate-600);
+    border-radius: var(--radius-sm);
+    transition: all 0.2s ease;
+    position: relative;
+    letter-spacing: 0.1px;
+}
+.nav-links a:hover { color: var(--navy-700); background: var(--slate-100); }
+.nav-links a.active { color: var(--navy-800); font-weight: 600; }
+.nav-links a.active::before {
+    content: ''; position: absolute;
+    bottom: -1px; left: 50%; transform: translateX(-50%);
+    width: 18px; height: 2px;
+    background: var(--gold-400);
+    border-radius: 2px;
+}
+.nav-cn { color: var(--slate-400); font-size: 0.72rem; margin-left: 2px; }
+
+.lang-switcher {
+    display: flex;
+    background: var(--slate-100);
+    border-radius: var(--radius-sm);
+    padding: 2px;
+    border: 1px solid var(--slate-200);
+}
+.lang-btn {
+    padding: 0.3rem 0.7rem;
+    border: none;
+    background: transparent;
+    color: var(--slate-500);
+    font-size: 0.72rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: all 0.2s;
+    font-family: inherit;
+}
+.lang-btn.active {
+    background: var(--white);
+    color: var(--navy-700);
+    box-shadow: var(--shadow-xs);
+}
+.lang-btn:hover:not(.active) { color: var(--slate-700); }
+
+.mobile-menu-btn {
+    display: none;
+    background: none; border: none;
+    width: 36px; height: 36px;
+    cursor: pointer;
+    color: var(--slate-700);
+    font-size: 1.2rem;
+    border-radius: var(--radius-sm);
+    transition: background 0.2s;
+}
+.mobile-menu-btn:hover { background: var(--slate-100); }
+
+.hero {
+    min-height: 100vh;
+    display: flex; align-items: center;
+    position: relative;
+    background: var(--navy-900);
+    color: var(--white);
+    padding: 100px 0 70px;
+    overflow: hidden;
+}
+.hero-bg-grid {
+    position: absolute; inset: 0;
+    background-image:
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(ellipse at 70% 50%, #000 40%, transparent 80%);
+    -webkit-mask-image: radial-gradient(ellipse at 70% 50%, #000 40%, transparent 80%);
+}
+.hero-glow {
+    position: absolute; top: -10%; right: -5%;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(212,164,55,0.12) 0%, transparent 65%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+.hero-glow-2 {
+    position: absolute; bottom: -20%; left: -10%;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(45,90,143,0.3) 0%, transparent 65%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+.hero-container {
+    max-width: 1200px; margin: 0 auto; padding: 0 2rem;
+    display: grid; grid-template-columns: 340px 1fr;
+    gap: 5rem; align-items: center;
+    position: relative; z-index: 1;
+}
+.hero-photo-col { display: flex; justify-content: center; }
+.photo-frame {
+    position: relative;
+    width: 300px;
+}
+.photo-frame::before {
+    content: '';
+    position: absolute; top: -12px; left: -12px; right: 12px; bottom: 12px;
+    border: 2px solid var(--gold-400);
+    z-index: 0;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.photo-frame:hover::before { top: -16px; left: -16px; }
+.hero-photo {
+    width: 300px; height: 380px;
+    object-fit: cover;
+    position: relative; z-index: 1;
+    filter: saturate(1.05);
+}
+.photo-accent-bar {
+    position: absolute;
+    bottom: -1px; right: -1px;
+    width: 60px; height: 60px;
+    background: var(--gold-400);
+    z-index: 2;
+    clip-path: polygon(100% 0, 0 100%, 100% 100%);
+}
+
+.hero-eyebrow {
+    display: inline-flex; align-items: center; gap: 0.6rem;
+    font-size: 0.78rem; font-weight: 600;
+    color: var(--gold-300);
+    letter-spacing: 2px; text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
+.hero-eyebrow::before {
+    content: ''; width: 32px; height: 1px; background: var(--gold-400);
+}
+.hero-content h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.8rem;
+    font-weight: 600;
+    line-height: 1.05;
+    letter-spacing: -0.5px;
+    margin-bottom: 0.4rem;
+    color: var(--white);
+}
+.hero-name-cn {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--gold-300);
+    margin-bottom: 1.75rem;
+    letter-spacing: 4px;
+}
+.hero-title {
+    font-size: 1.15rem;
+    font-weight: 400;
+    color: rgba(255,255,255,0.92);
+    margin-bottom: 0.3rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    letter-spacing: 0.3px;
+}
+.hero-title-cn {
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.65);
+    margin-bottom: 2.25rem;
+}
+.hero-divider {
+    width: 50px; height: 2px;
+    background: var(--gold-400);
+    margin-bottom: 2rem;
+}
+.hero-bio {
+    font-size: 0.92rem;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.72);
+    max-width: 580px;
+    margin-bottom: 1.25rem;
+}
+.hero-bio-cn {
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.6);
+    padding-top: 0.75rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    margin-bottom: 2rem;
+    max-width: 580px;
+}
+.hero-contact {
+    display: flex; flex-wrap: wrap; gap: 0.75rem;
+    margin-bottom: 2.5rem;
+}
+.hero-contact-item {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    padding: 0.55rem 1rem;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: var(--radius-sm);
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.8);
+    transition: all 0.25s;
+    text-decoration: none;
+}
+.hero-contact-item:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: rgba(255,255,255,0.18);
+    transform: translateY(-1px);
+}
+.hero-contact-item svg { width: 14px; height: 14px; fill: var(--gold-400); flex-shrink: 0; }
+
+.hero-stats {
+    display: grid; grid-template-columns: repeat(5, 1fr);
+    gap: 0;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding-top: 2rem;
+    max-width: 600px;
+}
+.stat-item {
+    padding: 0 1rem;
+    border-right: 1px solid rgba(255,255,255,0.08);
+    text-align: left;
+}
+.stat-item:last-child { border-right: none; }
+.stat-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem; font-weight: 600;
+    color: var(--gold-400);
+    line-height: 1;
+    display: block;
+}
+.stat-label {
+    font-size: 0.72rem;
+    color: rgba(255,255,255,0.55);
+    margin-top: 0.35rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+section { padding: 90px 0; }
+.section-wrap { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+.section-alt { background: var(--white); }
+
+.section-header { text-align: center; margin-bottom: 3.5rem; }
+.section-eyebrow {
+    display: inline-flex; align-items: center; gap: 0.6rem;
+    font-size: 0.72rem; font-weight: 600;
+    color: var(--gold-500);
+    letter-spacing: 2.5px; text-transform: uppercase;
+    margin-bottom: 0.85rem;
+}
+.section-eyebrow::before, .section-eyebrow::after {
+    content: ''; width: 24px; height: 1px; background: var(--gold-300);
+}
+.section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: var(--navy-900);
+    letter-spacing: -0.3px;
+    margin-bottom: 0.35rem;
+}
+.section-subtitle {
+    font-size: 0.95rem;
+    color: var(--slate-500);
+    margin-bottom: 1.25rem;
+}
+.section-line {
+    width: 40px; height: 2px;
+    background: var(--gold-400);
+    margin: 0 auto;
+}
+
+.about-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+}
+.about-card {
+    padding: 2.25rem;
+    background: var(--white);
+    border: 1px solid var(--slate-200);
+    border-radius: var(--radius-lg);
+    position: relative;
+    transition: all 0.3s ease;
+}
+.about-card:hover {
+    border-color: var(--slate-300);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+.about-card::before {
+    content: '';
+    position: absolute; top: 0; left: 2rem;
+    width: 32px; height: 3px;
+    background: var(--gold-400);
+    border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+}
+.about-card.cn::before { background: var(--navy-600); }
+.about-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem; font-weight: 600;
+    color: var(--navy-800);
+    margin-bottom: 1.1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--slate-100);
+}
+.about-card p {
+    font-size: 0.92rem;
+    color: var(--slate-600);
+    margin-bottom: 0.85rem;
+    line-height: 1.8;
+}
+.about-card p:last-child { margin-bottom: 0; }
+
+.info-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 1rem 2rem;
+    margin-top: 1.25rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--slate-100);
+}
+.info-item { display: flex; flex-direction: column; gap: 0.1rem; }
+.info-label {
+    font-size: 0.72rem; font-weight: 600;
+    color: var(--slate-400);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+.info-value { font-size: 0.88rem; color: var(--slate-700); }
+
+.two-col {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+.section-card {
+    background: var(--white);
+    border: 1px solid var(--slate-200);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+.section-card:hover {
+    border-color: var(--slate-300);
+    box-shadow: var(--shadow-md);
+}
+.card-header {
+    display: flex; align-items: center; gap: 0.85rem;
+    margin-bottom: 1.75rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--slate-100);
+}
+.card-icon {
+    width: 38px; height: 38px;
+    background: var(--gold-50);
+    color: var(--gold-500);
+    display: flex; align-items: center; justify-content: center;
+    border-radius: var(--radius-sm);
+    font-size: 1rem;
+}
+.card-header h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.25rem; font-weight: 600;
+    color: var(--navy-800);
+}
+.card-header-cn {
+    font-size: 0.78rem;
+    color: var(--slate-500);
+    margin-top: 0.1rem;
+}
+
+.timeline { position: relative; }
+.tl-item {
+    position: relative;
+    padding-left: 1.75rem;
+    padding-bottom: 1.75rem;
+    border-left: 1.5px solid var(--slate-200);
+}
+.tl-item:last-child {
+    padding-bottom: 0;
+    border-left-color: transparent;
+}
+.tl-item::before {
+    content: '';
+    position: absolute; left: -5px; top: 0.25rem;
+    width: 9px; height: 9px;
+    background: var(--gold-400);
+    border: 2px solid var(--white);
+    border-radius: 50%;
+    box-shadow: 0 0 0 1.5px var(--gold-400);
+}
+.tl-period {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--navy-600);
+    background: var(--slate-100);
+    padding: 0.2rem 0.6rem;
+    border-radius: var(--radius-sm);
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.3px;
+}
+.tl-title {
+    font-size: 0.98rem;
+    font-weight: 600;
+    color: var(--slate-900);
+    margin-bottom: 0.15rem;
+}
+.tl-sub {
+    font-size: 0.86rem;
+    color: var(--slate-500);
+    margin-bottom: 0.5rem;
+    font-style: italic;
+}
+.tl-desc {
+    font-size: 0.84rem;
+    color: var(--slate-600);
+    line-height: 1.7;
+}
+.tl-desc-cn {
+    font-size: 0.82rem;
+    color: var(--slate-500);
+    margin-top: 0.4rem;
+    padding-top: 0.4rem;
+    border-top: 1px dashed var(--slate-200);
+}
+
+.highlights-row {
+    display: grid; grid-template-columns: repeat(5, 1fr);
+    gap: 1px;
+    background: var(--slate-200);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    margin-bottom: 3rem;
+    border: 1px solid var(--slate-200);
+}
+.hl-box {
+    background: var(--white);
+    padding: 2rem 1.25rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+.hl-box:hover {
+    background: var(--slate-50);
+}
+.hl-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--navy-700);
+    line-height: 1;
+    display: block;
+    margin-bottom: 0.4rem;
+}
+.hl-label {
+    font-size: 0.78rem;
+    color: var(--slate-600);
+    font-weight: 500;
+}
+.hl-label-cn {
+    display: block;
+    font-size: 0.7rem;
+    color: var(--slate-400);
+    margin-top: 0.15rem;
+}
+
+.pub-list { display: flex; flex-direction: column; gap: 0.85rem; }
+.pub-item {
+    display: flex; gap: 1.25rem;
+    padding: 1.25rem 1.5rem;
+    background: var(--white);
+    border: 1px solid var(--slate-200);
+    border-radius: var(--radius-md);
+    transition: all 0.25s ease;
+    position: relative;
+    overflow: hidden;
+}
+.pub-item::before {
+    content: '';
+    position: absolute; left: 0; top: 0; bottom: 0;
+    width: 3px; background: var(--navy-600);
+    transition: width 0.25s ease;
+}
+.pub-item:hover {
+    border-color: var(--slate-300);
+    box-shadow: var(--shadow-md);
+    transform: translateX(3px);
+}
+.pub-item:hover::before { width: 4px; background: var(--gold-400); }
+.pub-idx {
+    flex-shrink: 0;
+    width: 30px; height: 30px;
+    background: var(--slate-100);
+    color: var(--navy-700);
+    border-radius: var(--radius-sm);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.78rem; font-weight: 700;
+    font-family: 'Cormorant Garamond', serif;
+}
+.pub-body { flex: 1; min-width: 0; }
+.pub-title {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--slate-900);
+    line-height: 1.55;
+    margin-bottom: 0.5rem;
+}
+.pub-meta {
+    display: flex; flex-wrap: wrap; align-items: center;
+    gap: 0.75rem;
+    font-size: 0.78rem;
+}
+.pub-journal {
+    font-style: italic;
+    color: var(--navy-600);
+    font-weight: 500;
+}
+.pub-if {
+    display: inline-flex; align-items: center;
+    padding: 0.1rem 0.55rem;
+    background: var(--gold-50);
+    color: var(--gold-500);
+    border-radius: 10px;
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+.pub-q {
+    font-size: 0.7rem;
+    color: var(--slate-400);
+    font-weight: 600;
+    background: var(--slate-100);
+    padding: 0.1rem 0.5rem;
+    border-radius: 10px;
+}
+.pub-year { color: var(--slate-500); }
+
+.table-wrap {
+    background: var(--white);
+    border: 1px solid var(--slate-200);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+}
+.trials-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+table thead th {
+    background: var(--navy-700);
+    color: var(--white);
+    font-weight: 600;
+    font-size: 0.78rem;
+    text-align: left;
+    padding: 0.9rem 1.25rem;
+    letter-spacing: 0.3px;
+}
+table tbody td {
+    padding: 0.85rem 1.25rem;
+    font-size: 0.86rem;
+    color: var(--slate-700);
+    border-bottom: 1px solid var(--slate-100);
+    vertical-align: top;
+}
+table tbody tr:last-child td { border-bottom: none; }
+table tbody tr:hover { background: var(--slate-50); }
+.phase-tag {
+    display: inline-block;
+    padding: 0.15rem 0.6rem;
+    background: var(--navy-50);
+    color: var(--navy-700);
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+}
+.role-pi {
+    color: var(--gold-500);
+    font-weight: 600;
+}
+
+.pres-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 1rem;
+}
+.pres-card {
+    display: flex; gap: 1rem;
+    padding: 1.25rem;
+    background: var(--white);
+    border: 1px solid var(--slate-200);
+    border-radius: var(--radius-md);
+    transition: all 0.25s;
+}
+.pres-card:hover {
+    border-color: var(--slate-300);
+    box-shadow: var(--shadow-sm);
+    transform: translateY(-2px);
+}
+.pres-date-box {
+    flex-shrink: 0;
+    width: 56px;
+    text-align: center;
+    padding-top: 0.25rem;
+}
+.pres-year {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--navy-700);
+    line-height: 1;
+}
+.pres-month {
+    font-size: 0.7rem;
+    color: var(--slate-500);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 0.2rem;
+}
+.pres-body { flex: 1; min-width: 0; }
+.pres-title {
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--slate-800);
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+}
+.pres-type {
+    display: inline-block;
+    padding: 0.1rem 0.55rem;
+    font-size: 0.68rem;
+    font-weight: 600;
+    border-radius: 3px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+.pres-type.oral { background: #ecfdf5; color: #047857; }
+.pres-type.poster { background: #eff6ff; color: #1d4ed8; }
+
+.contact-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    margin-bottom: 3rem;
+}
+.contact-card {
+    padding: 2rem 1.5rem;
+    background: var(--white);
+    border: 1px solid var(--slate-200);
+    border-radius: var(--radius-lg);
+    text-align: center;
+    transition: all 0.3s;
+}
+.contact-card:hover {
+    border-color: var(--gold-300);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-3px);
+}
+.contact-icon {
+    width: 50px; height: 50px;
+    background: var(--gold-50);
+    color: var(--gold-500);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 1rem;
+    font-size: 1.25rem;
+}
+.contact-label {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--slate-400);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.35rem;
+}
+.contact-value {
+    font-size: 0.92rem;
+    color: var(--slate-800);
+    font-weight: 500;
+    word-break: break-all;
+}
+
+footer {
+    background: var(--navy-900);
+    color: rgba(255,255,255,0.7);
+    text-align: center;
+    padding: 3rem 2rem 2.5rem;
+    position: relative;
+}
+footer::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--gold-400), transparent);
+}
+.footer-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 0.35rem;
+}
+.footer-title {
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 1.5rem;
+}
+.footer-divider {
+    width: 40px; height: 1px;
+    background: rgba(255,255,255,0.15);
+    margin: 0 auto 1.5rem;
+}
+.footer-copy {
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.35);
+}
+
+.to-top {
+    position: fixed; bottom: 2rem; right: 2rem;
+    width: 42px; height: 42px;
+    background: var(--navy-700);
+    color: var(--white);
+    border: none;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1rem;
+    box-shadow: var(--shadow-lg);
+    opacity: 0; visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 999;
+}
+.to-top.visible { opacity: 1; visibility: visible; }
+.to-top:hover {
+    background: var(--navy-600);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-xl);
+}
+
+body.lang-en .cn-only { display: none !important; }
+body.lang-cn .en-only { display: none !important; }
+body.lang-bi .cn-only, body.lang-bi .en-only { display: block; }
+body.lang-bi .inline-cn { display: inline; }
+.inline-cn { display: none; }
+
+@media print {
+    nav, .scroll-progress, .to-top, .lang-switcher, .mobile-menu-btn { display: none !important; }
+    .hero { min-height: auto; padding: 2rem 0; background: white !important; color: var(--slate-900) !important; }
+    .hero-bg-grid, .hero-glow, .hero-glow-2 { display: none; }
+    section { padding: 1.5rem 0; page-break-inside: avoid; }
+    .section-card, .about-card, .pub-item, .contact-card, .pres-card {
+        box-shadow: none !important; border: 1px solid #ccc !important;
+    }
+    .highlights-row { border: 1px solid #ccc; }
+    table { font-size: 0.8rem; }
+}
+
+@media (max-width: 960px) {
+    .nav-links { display: none; }
+    .nav-container { padding: 0 1.25rem; }
+    .mobile-menu-btn { display: flex; align-items: center; justify-content: center; }
+    .nav-links.mobile-open {
+        display: flex; flex-direction: column;
+        position: absolute; top: 68px; left: 0; right: 0;
+        background: var(--white);
+        padding: 0.75rem 1.25rem;
+        border-bottom: 1px solid var(--slate-200);
+        box-shadow: var(--shadow-md);
+        gap: 0.25rem;
+    }
+    .nav-links a { padding: 0.7rem 0.85rem; border-bottom: 1px solid var(--slate-100); }
+    .nav-links a:last-child { border-bottom: none; }
+
+    .hero { min-height: auto; padding: 90px 0 50px; }
+    .hero-container {
+        grid-template-columns: 1fr; gap: 2.5rem; text-align: center;
+    }
+    .hero-photo-col { order: -1; }
+    .photo-frame { width: 220px; margin: 0 auto; }
+    .hero-photo { width: 220px; height: 280px; }
+    .hero-content h1 { font-size: 2.6rem; }
+    .hero-name-cn { font-size: 1.3rem; letter-spacing: 2px; }
+    .hero-eyebrow { justify-content: center; }
+    .hero-divider { margin: 0 auto 2rem; }
+    .hero-contact { justify-content: center; }
+    .hero-stats {
+        grid-template-columns: repeat(5, 1fr);
+        margin: 0 auto;
+    }
+    .about-grid, .two-col { grid-template-columns: 1fr; }
+    .highlights-row { grid-template-columns: repeat(3, 1fr); }
+    .contact-grid { grid-template-columns: 1fr; }
+    .section-title { font-size: 1.9rem; }
+    section { padding: 60px 0; }
+}
+
+@media (max-width: 600px) {
+    .hero-stats { grid-template-columns: repeat(3, 1fr); max-width: 100%; }
+    .stat-item:nth-child(4), .stat-item:nth-child(5) { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1rem; margin-top: 1rem; }
+    .highlights-row { grid-template-columns: repeat(2, 1fr); }
+    .hl-box { padding: 1.5rem 1rem; }
+    .hl-number { font-size: 2rem; }
+    .pub-item { flex-direction: column; gap: 0.75rem; }
+    .pub-idx { align-self: flex-start; }
+    .pres-grid { grid-template-columns: 1fr; }
+    .lang-switcher { display: none; }
+    .hero-content h1 { font-size: 2.2rem; }
+    .section-wrap { padding: 0 1.25rem; }
+    table thead th, table tbody td { padding: 0.7rem 0.85rem; font-size: 0.78rem; }
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1), transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.reveal.in-view { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body class="lang-bi">
+
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<nav id="navbar">
+<div class="nav-container">
+    <div class="nav-brand">
+        <div class="nav-monogram">ST</div>
+        <div class="nav-name">
+            <span class="nav-name-en">Shanshan Tian</span>
+            <span class="nav-name-cn cn">田姗姗</span>
+        </div>
+    </div>
+    <div class="nav-right">
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Menu">☰</button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#about" class="nav-link" data-section="about">About <span class="nav-cn cn-only">关于</span></a></li>
+            <li><a href="#experience" class="nav-link" data-section="experience">Experience <span class="nav-cn cn-only">经历</span></a></li>
+            <li><a href="#research" class="nav-link" data-section="research">Research <span class="nav-cn cn-only">研究</span></a></li>
+            <li><a href="#publications" class="nav-link" data-section="publications">Publications <span class="nav-cn cn-only">论文</span></a></li>
+            <li><a href="#trials" class="nav-link" data-section="trials">Trials <span class="nav-cn cn-only">临床</span></a></li>
+            <li><a href="#awards" class="nav-link" data-section="awards">Awards <span class="nav-cn cn-only">荣誉</span></a></li>
+            <li><a href="#contact" class="nav-link" data-section="contact">Contact <span class="nav-cn cn-only">联系</span></a></li>
+        </ul>
+        <div class="lang-switcher">
+            <button class="lang-btn" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="cn">中</button>
+            <button class="lang-btn active" data-lang="bi">EN/中</button>
+        </div>
+    </div>
+</div>
+</nav>
+
+<section class="hero" id="home">
+<div class="hero-bg-grid"></div>
+<div class="hero-glow"></div>
+<div class="hero-glow-2"></div>
+<div class="hero-container">
+    <div class="hero-photo-col">
+        <div class="photo-frame">
+            <img src="data:image/jpeg;base64,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" alt="Shanshan Tian" class="hero-photo">
+            <div class="photo-accent-bar"></div>
+        </div>
+    </div>
+    <div class="hero-content">
+        <div class="hero-eyebrow">Associate Chief Pharmacist</div>
+        <h1>Shanshan Tian, Ph.D.</h1>
+        <div class="hero-name-cn cn">田 姗 姗</div>
+        <div class="hero-title">Psychiatry Research &amp; Clinical Pharmacology</div>
+        <div class="hero-title-cn cn">精神药理学 · 临床药学</div>
+        <div class="hero-divider"></div>
+        <p class="hero-bio">
+            Dr. Tian is an Associate Chief Pharmacist and Postdoctoral Fellow at Beijing Anding Hospital, Capital Medical University, specializing in clinical trial design, antidepressant pharmacology, and mental health research. With over 30 SCI publications and 10+ clinical trials, her work bridges pharmaceutical science and psychiatric care.
+        </p>
+        <p class="hero-bio-cn cn">
+            副主任药师，首都医科大学附属北京安定医院博士后。主要从事精神疾病临床试验设计、新型抗抑郁药药理学及心理健康研究，发表 SCI 论文 30 余篇，主持及参与临床试验 10 余项，致力于药学与精神医学的交叉融合。
+        </p>
+        <div class="hero-contact">
+            <a href="mailto:tianshanshan@mail.ccmu.edu.cn" class="hero-contact-item">
+                <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                tianshanshan@mail.ccmu.edu.cn
+            </a>
+            <span class="hero-contact-item">
+                <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                +86 13621202449
+            </span>
+            <span class="hero-contact-item">
+                <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                Beijing, China
+            </span>
+        </div>
+        <div class="hero-stats">
+            <div class="stat-item">
+                <span class="stat-number">30+</span>
+                <span class="stat-label">SCI Papers</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">11</span>
+                <span class="stat-label">1st Author</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">10+</span>
+                <span class="stat-label">Trials</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">2</span>
+                <span class="stat-label">Patents</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">2</span>
+                <span class="stat-label">PI Grants</span>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+<section id="about" class="section-alt">
+<div class="section-wrap">
+    <div class="section-header reveal">
+        <div class="section-eyebrow">About</div>
+        <h2 class="section-title">Professional Profile</h2>
+        <p class="section-subtitle cn">个人简介</p>
+        <div class="section-line"></div>
+    </div>
+    <div class="about-grid">
+        <div class="about-card reveal">
+            <h3>Research Focus</h3>
+            <p>Dr. Shanshan Tian earned her Ph.D. in Psychiatry &amp; Mental Health from Peking University under the supervision of Prof. Lin Lu. Her research spans the neuropharmacology of mental disorders, with particular emphasis on antidepressant drug development and clinical trial methodology.</p>
+            <p>She has pioneered frameworks for reducing placebo effects in novel antidepressant trials and authored China's comprehensive progress report on new antidepressant agents. Her work integrates molecular pharmacology, clinical trial design, and real-world evidence to advance psychiatric care.</p>
+            <div class="info-grid">
+                <div class="info-item">
+                    <span class="info-label">Born</span>
+                    <span class="info-value">June 5, 1989</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Nationality</span>
+                    <span class="info-value">Chinese</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Languages</span>
+                    <span class="info-value">Chinese, English (IELTS 6.5)</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Status</span>
+                    <span class="info-value">Married</span>
+                </div>
+            </div>
+        </div>
+        <div class="about-card cn reveal">
+            <h3 class="cn">研究方向</h3>
+            <p class="cn">田姗姗博士于北京大学获得精神病与精神卫生学博士学位，师从陆林院士。研究方向涵盖精神疾病神经药理学，专注于抗抑郁药物研发与临床试验方法学。</p>
+            <p class="cn">在新型抗抑郁药临床试验的安慰剂效应降低策略方面开展了开创性工作，牵头撰写中国新型抗抑郁药进展报告。研究融合分子药理学、临床试验设计与真实世界证据，推动精神疾病诊疗进步。</p>
+            <div class="info-grid">
+                <div class="info-item">
+                    <span class="info-label cn">出生年月</span>
+                    <span class="info-value cn">1989年6月</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label cn">国籍</span>
+                    <span class="info-value cn">中国</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label cn">语言</span>
+                    <span class="info-value cn">中文、英文（雅思6.5）</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label cn">婚否</span>
+                    <span class="info-value cn">已婚</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+<section id="experience">
+<div class="section-wrap">
+    <div class="section-header reveal">
+        <div class="section-eyebrow">Background</div>
+        <h2 class="section-title">Education &amp; Experience</h2>
+        <p class="section-subtitle cn">教育背景与工作经历</p>
+        <div class="section-line"></div>
+    </div>
+    <div class="two-col">
+        <div class="section-card reveal">
+            <div class="card-header">
+                <div class="card-icon">🎓</div>
+                <div>
+                    <h3>Education</h3>
+                    <div class="card-header-cn cn">教育背景</div>
+                </div>
+            </div>
+            <div class="timeline">
+                <div class="tl-item">
+                    <span class="tl-period">2020.09 — 2024.07</span>
+                    <div class="tl-title">Peking University</div>
+                    <div class="tl-sub">Ph.D. in Psychiatry &amp; Mental Health</div>
+                    <div class="tl-desc">Advisor: Prof. Lin Lu<br>Research focus: antidepressant pharmacology and clinical trial design.</div>
+                    <div class="tl-desc-cn cn">导师：陆林教授<br>研究方向：抗抑郁药理学与临床试验设计</div>
+                </div>
+                <div class="tl-item">
+                    <span class="tl-period">2013.09 — 2016.07</span>
+                    <div class="tl-title">Harbin Medical University</div>
+                    <div class="tl-sub">M.Sc. in Pharmacology</div>
+                    <div class="tl-desc">Advisor: Prof. Zhimin Du<br>Research on cardiovascular pharmacology and microRNA mechanisms.</div>
+                    <div class="tl-desc-cn cn">导师：杜智敏教授<br>心血管药理学与microRNA机制研究</div>
+                </div>
+                <div class="tl-item">
+                    <span class="tl-period">2008.09 — 2013.07</span>
+                    <div class="tl-title">Harbin Medical University</div>
+                    <div class="tl-sub">B.Sc. in Clinical Pharmacy</div>
+                    <div class="tl-desc-cn cn">临床药学学士</div>
+                </div>
+            </div>
+        </div>
+        <div class="section-card reveal">
+            <div class="card-header">
+                <div class="card-icon">💼</div>
+                <div>
+                    <h3>Work Experience</h3>
+                    <div class="card-header-cn cn">工作经历</div>
+                </div>
+            </div>
+            <div class="timeline">
+                <div class="tl-item">
+                    <span class="tl-period">2024.07 — Present</span>
+                    <div class="tl-title">Beijing Anding Hospital, CCMU</div>
+                    <div class="tl-sub">Postdoctoral Fellow · Associate Chief Pharmacist</div>
+                    <div class="tl-desc">Leading clinical trial design and implementation; developing frameworks for placebo effect reduction in novel antidepressant trials; authored China's progress report on new antidepressants.</div>
+                    <div class="tl-desc-cn cn">首都医科大学附属北京安定医院<br>博士后 · 副主任药师<br>主持临床试验设计与实施；新型抗抑郁药安慰剂效应降低策略；中国新型抗抑郁药进展报告牵头撰写人</div>
+                </div>
+                <div class="tl-item">
+                    <span class="tl-period">2016.08 — 2024.07</span>
+                    <div class="tl-title">Peking University Sixth Hospital</div>
+                    <div class="tl-sub">Supervisor Pharmacist</div>
+                    <div class="tl-desc">Clinical rational drug use guidance, TDM report interpretation, medication education, prescription analysis, ward rounds, and clinical pharmacy consultations.</div>
+                    <div class="tl-desc-cn cn">北京大学第六医院 · 主管药师<br>临床合理用药指导、TDM报告解读、用药教育、处方分析、药学查房与会诊</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+<section id="research" class="section-alt">
+<div class="section-wrap">
+    <div class="section-header reveal">
+        <div class="section-eyebrow">Research</div>
+        <h2 class="section-title">Achievements at a Glance</h2>
+        <p class="section-subtitle cn">研究成果一览</p>
+        <div class="section-line"></div>
+    </div>
+    <div class="highlights-row reveal">
+        <div class="hl-box">
+            <span class="hl-number">30+</span>
+            <span class="hl-label">SCI Publications</span>
+            <span class="hl-label-cn cn">SCI论文</span>
+        </div>
+        <div class="hl-box">
+            <span class="hl-number">11</span>
+            <span class="hl-label">First-Author</span>
+            <span class="hl-label-cn cn">第一作者</span>
+        </div>
+        <div class="hl-box">
+            <span class="hl-number">10+</span>
+            <span class="hl-label">Clinical Trials</span>
+            <span class="hl-label-cn cn">临床试验</span>
+        </div>
+        <div class="hl-box">
+            <span class="hl-number">2</span>
+            <span class="hl-label">Patents</span>
+            <span class="hl-label-cn cn">授权专利</span>
+        </div>
+        <div class="hl-box">
+            <span class="hl-number">2</span>
+            <span class="hl-label">PI Grants</span>
+            <span class="hl-label-cn cn">主持基金</span>
+        </div>
+    </div>
+    <div class="two-col">
+        <div class="section-card reveal">
+            <div class="card-header">
+                <div class="card-icon">📚</div>
+                <div>
+                    <h3>Books &amp; Certificates</h3>
+                    <div class="card-header-cn cn">著作与证书</div>
+                </div>
+            </div>
+            <div class="timeline" style="padding-left:0; border:none;">
+                <div class="tl-item" style="border:none; padding-left:0; padding-bottom:1rem;">
+                    <div class="tl-title" style="font-size:0.92rem;">Books (Contributor) <span class="cn-only">/ 参编著作</span></div>
+                    <div class="tl-desc" style="padding-top:0.3rem;">
+                        • <em>Clinical Pathway Therapeutic Drug Explanation – Psychiatry Volume</em>, China Union Medical University Press<br>
+                        <span class="cn-only cn">《临床路径治疗药物释义—精神科分册》，中国协和医科大学出版社</span>
+                    </div>
+                    <div class="tl-desc" style="padding-top:0.3rem;">
+                        • <em>Psychosomatic Medicine</em>, Peking University Medical Press<br>
+                        <span class="cn-only cn">《心身医学》，北京大学医学出版社</span>
+                    </div>
+                </div>
+                <div class="tl-item" style="border:none; padding-left:0; padding-bottom:0;">
+                    <div class="tl-title" style="font-size:0.92rem;">Certificates <span class="cn-only">/ 证书资质</span></div>
+                    <div class="tl-desc" style="padding-top:0.3rem;">
+                        • Associate Chief Pharmacist · 副主任药师<br>
+                        • GCP Certificate · 药物临床试验质量管理规范<br>
+                        • Licensed Pharmacist · 执业药师<br>
+                        • Psychotherapist · 心理治疗师<br>
+                        • CBT-I Certificate · 失眠认知行为治疗<br>
+                        • Python Certificate (Peking University) · 北京大学Python证书<br>
+                        • R Language · R语言<br>
+                        • IELTS 6.5 / CET-6
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section-card reveal">
+            <div class="card-header">
+                <div class="card-icon">🌟</div>
+                <div>
+                    <h3>Academic Affiliations</h3>
+                    <div class="card-header-cn cn">学术任职</div>
+                </div>
+            </div>
+            <div class="timeline" style="padding-left:0; border:none;">
+                <div class="tl-item" style="border:none; padding-left:0; padding-bottom:0.8rem;">
+                    <div class="tl-desc" style="font-size:0.86rem; color:var(--slate-700);">
+                        • Youth Committee Member, AI in Anesthesiology Branch, Chinese Society of Cardiothoracic and Vascular Anesthesiology<br>
+                        <span class="cn-only cn">中国心胸血管麻醉学会人工智能分会青年委员</span>
+                    </div>
+                </div>
+                <div class="tl-item" style="border:none; padding-left:0; padding-bottom:0.8rem;">
+                    <div class="tl-desc" style="font-size:0.86rem; color:var(--slate-700);">
+                        • Science Popularization Expert, Beijing Pharmacists Association<br>
+                        <span class="cn-only cn">北京药学会科普专家</span>
+                    </div>
+                </div>
+                <div class="tl-item" style="border:none; padding-left:0; padding-bottom:0.8rem;">
+                    <div class="tl-desc" style="font-size:0.86rem; color:var(--slate-700);">
+                        • Youth Editorial Board Member, <em>Heart and Mind</em><br>
+                        <span class="cn-only cn">《Heart and Mind》青年编委</span>
+                    </div>
+                </div>
+                <div class="tl-item" style="border:none; padding-left:0; padding-bottom:0;">
+                    <div class="tl-desc" style="font-size:0.86rem; color:var(--slate-700);">
+                        • Committee Member, Psychopharmacotherapy and Management, Beijing Pharmaceutical Society<br>
+                        <span class="cn-only cn">北京药学会精神药学专业委员会委员</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+<section id="publications">
+<div class="section-wrap">
+    <div class="section-header reveal">
+        <div class="section-eyebrow">Publications</div>
+        <h2 class="section-title">First-Author Papers</h2>
+        <p class="section-subtitle cn">第一作者论文</p>
+        <div class="section-line"></div>
+    </div>
+    <div class="pub-list">
+        <div class="pub-item reveal">
+            <div class="pub-idx">01</div>
+            <div class="pub-body">
+                <div class="pub-title">Tian S, Huangfu L, Li A, et al. Evolution of drug classification, targets distribution and introductions for new antidepressants in China.</div>
+                <div class="pub-meta">
+                    <span class="pub-journal">Sci China Life Sci</span>
+                    <span class="pub-if">IF 9.5</span>
+                    <span class="pub-q">Q1</span>
+                    <span class="pub-year">2025</span>
+                </div>
+            </div>
+        </div>
+        <div class="pub-item reveal">
+            <div class="pub-idx">02</div>
+            <div class="pub-body">
+                <div class="pub-title">Tian S, Wang Q, Wu T, et al. Healthy lifestyle and risk of incidence, mortality and life expectancy of mental disorders.</div>
+                <div class="pub-meta">
+                    <span class="pub-journal">J Affect Disord</span>
+                    <span class="pub-if">IF 4.9</span>
+                    <span class="pub-q">Q1</span>
+                    <span class="pub-year">2025</span>
+                </div>
+            </div>
+        </div>
+        <div class="pub-item reveal">
+            <div class="pub-idx">03</div>
+            <div class="pub-body">
+                <div class="pub-title">Tian S, Huangfu L, Fanan Y, et al. Pilot RCT of TMS for insomnia in cancer survivors.</div>
+                <div class="pub-meta">
+                    <span class="pub-journal">Int J Cancer</span>
+                    <span class="pub-if">IF 5.7</span>
+                    <span class="pub-q">Q1</span>
+                    <span class="pub-year">2025</span>
+                </div>
+            </div>
+        </div>
+        <div class="pub-item reveal">
+            <div class="pub-idx">04</div>
+            <div class="pub-body">
+                <div class="pub-title">Tian S#, Huangfu L#, Ai S, et al. Causal relationships between chronotype and risk of multiple cancers.</div>
+                <div class="pub-meta">
+                    <span class="pub-journal">Sci China Life Sci</span>
+                    <span class="pub-if">IF 10.4</span>
+                    <span class="pub-q">Q1</span>
+                    <span class="pub-year">2023</span>
+                </div>
+            </div>
+        </div>
+        <div class="pub-item reveal">
+            <div class="pub-idx">05</div>
+            <div class="pub-body">
+                <div class="pub-title">Tian S, Huangfu L, Bao Y, et al. Causal associations of sleep traits with cancer incidence and mortality.</div>
+                <div class="pub-meta">
+                    <span class="pub-journal">Front Genet</span>
+                    <span class="pub-if">IF 3.7</span>
+                    <span class="pub-q">Q2</span>
+                    <span class="pub-year">2023</span>
+                </div>
+            </div>
+        </div>
+        <div class="pub-item reveal">
+            <div class="pub-idx">06</div>
+            <div class="pub-body">
+                <div class="pub-title">Tian S, Zhao W, Yang D, et al. Atorvastatin inhibits miR-143 expression: protective mechanism against oxidative stress in cardiomyocytes.</div>
+                <div class="pub-meta">
+                    <span class="pub-journal">Int J Cardiol</span>
+                    <span class="pub-if">IF 6.2</span>
+                    <span class="pub-q">Q2</span>
+                    <span class="pub-year">2016</span>
+                </div>
+            </div>
+        </div>
+        <div class="pub-item reveal">
+            <div class="pub-idx">07</div>
+            <div class="pub-body">
+                <div class="pub-title">Huang W#, Tian S#, Hang P, et al. Combination of microRNA-21 and microRNA-146a attenuates cardiac dysfunction during acute MI.</div>
+                <div class="pub-meta">
+                    <span class="pub-journal">Mol Ther Nucleic Acids</span>
+                    <span class="pub-if">IF 10.2</span>
+                    <span class="pub-q">Q1</span>
+                    <span class="pub-year">2016</span>
+                </div>
+            </div>
+        </div>
+        <div class="pub-item reveal">
+            <div class="pub-idx">08</div>
+            <div class="pub-body">
+                <div class="pub-title">Tian S, Yuan K, Zheng Y, et al. Efficacy and safety of TCM combined with western medicine for COVID-19: systematic review.</div>
+                <div class="pub-meta">
+                    <span class="pub-journal">Heart and Mind</span>
+                    <span class="pub-if">IF 1.5</span>
+                    <span class="pub-q">Q3</span>
+                    <span class="pub-year">2022</span>
+                </div>
+            </div>
+        </div>
+        <div class="pub-item reveal">
+            <div class="pub-idx">09</div>
+            <div class="pub-body">
+                <div class="pub-title">Tian SS, Yang J, Hu J, Wang G. Research progress and future directions of anesthesiology therapeutics in psychiatric disorders.</div>
+                <div class="pub-meta">
+                    <span class="pub-journal">Chinese Journal of Psychiatry</span>
+                    <span class="pub-year">2025 (in Chinese)</span>
+                </div>
+            </div>
+        </div>
+        <div class="pub-item reveal">
+            <div class="pub-idx">10</div>
+            <div class="pub-body">
+                <div class="pub-title">Tian SS, Guo HF. Pharmacological effects and clinical evaluation of vortioxetine.</div>
+                <div class="pub-meta">
+                    <span class="pub-journal">Journal of Clinical Pharmacotherapy</span>
+                    <span class="pub-year">2018 (in Chinese)</span>
+                </div>
+            </div>
+        </div>
+        <div class="pub-item reveal">
+            <div class="pub-idx">11</div>
+            <div class="pub-body">
+                <div class="pub-title">Tian SS, Guo HF. Comprehensive evaluation of Wuling capsule combined with antidepressants for post-stroke depression.</div>
+                <div class="pub-meta">
+                    <span class="pub-journal">Journal of Apoplexy and Nervous Diseases</span>
+                    <span class="pub-year">2017 (in Chinese)</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-header" style="margin-top: 4.5rem;">
+        <div class="section-eyebrow">Patents</div>
+        <h2 class="section-title" style="font-size:1.9rem;">Authorized Patents</h2>
+        <p class="section-subtitle cn">授权专利</p>
+        <div class="section-line"></div>
+    </div>
+    <div class="two-col">
+        <div class="section-card reveal">
+            <div class="card-header">
+                <div class="card-icon">🔬</div>
+                <div>
+                    <h3>Patent 01</h3>
+                    <div class="card-header-cn cn">专利一</div>
+                </div>
+            </div>
+            <p style="font-size:0.88rem; color:var(--slate-700); line-height:1.7;">
+                Tian SS, Wang G, Li PF, Huangfu LT. <strong>High-efficiency condenser for raw material drug production</strong>.
+            </p>
+            <p style="font-size:0.82rem; color:var(--slate-500); margin-top:0.5rem;">
+                China Patent ZL202521625443.X · Issued April 2, 2025
+            </p>
+            <p style="font-size:0.84rem; color:var(--slate-600); margin-top:0.75rem; padding-top:0.75rem; border-top:1px solid var(--slate-100);" class="cn">
+                田姗姗 等。原料药生产用高效冷凝器。<br>
+                中国专利 ZL202521625443.X · 2025年4月2日授权
+            </p>
+        </div>
+        <div class="section-card reveal">
+            <div class="card-header">
+                <div class="card-icon">🔬</div>
+                <div>
+                    <h3>Patent 02</h3>
+                    <div class="card-header-cn cn">专利二</div>
+                </div>
+            </div>
+            <p style="font-size:0.88rem; color:var(--slate-700); line-height:1.7;">
+                Tian SS, Wang G, Li PF, Huangfu LT. <strong>Testing device for pharmaceutical biological drugs</strong>.
+            </p>
+            <p style="font-size:0.82rem; color:var(--slate-500); margin-top:0.5rem;">
+                China Patent ZL202521002073.4 · Issued May 21, 2025
+            </p>
+            <p style="font-size:0.84rem; color:var(--slate-600); margin-top:0.75rem; padding-top:0.75rem; border-top:1px solid var(--slate-100);" class="cn">
+                田姗姗 等。药用生物药品检测装置。<br>
+                中国专利 ZL202521002073.4 · 2025年5月21日授权
+            </p>
+        </div>
+    </div>
+</div>
+</section>
+
+<section id="trials" class="section-alt">
+<div class="section-wrap">
+    <div class="section-header reveal">
+        <div class="section-eyebrow">Clinical Research</div>
+        <h2 class="section-title">Trials &amp; Grants</h2>
+        <p class="section-subtitle cn">临床试验与科研项目</p>
+        <div class="section-line"></div>
+    </div>
+
+    <div class="two-col" style="margin-bottom: 2.5rem;">
+        <div class="section-card reveal">
+            <div class="card-header">
+                <div class="card-icon">💰</div>
+                <div>
+                    <h3>Research Grants (PI)</h3>
+                    <div class="card-header-cn cn">主持科研项目</div>
+                </div>
+            </div>
+            <div class="timeline" style="padding-left:0; border:none;">
+                <div class="tl-item" style="border:none; padding-left:0; padding-bottom:1rem;">
+                    <span class="tl-period">National Level · 国家级</span>
+                    <div class="tl-title" style="font-size:0.9rem;">China Postdoctoral Science Foundation</div>
+                    <div class="tl-sub" style="font-size:0.82rem;">18th Special Grant · RMB 180,000</div>
+                    <div class="tl-desc-cn cn" style="font-size:0.8rem;">中国博士后科学基金第18批特别资助 · 18万元</div>
+                </div>
+                <div class="tl-item" style="border:none; padding-left:0; padding-bottom:0;">
+                    <span class="tl-period">University Level · 校级</span>
+                    <div class="tl-title" style="font-size:0.9rem;">Peking University Cultivation Fund</div>
+                    <div class="tl-sub" style="font-size:0.82rem;">RMB 30,000</div>
+                    <div class="tl-desc-cn cn" style="font-size:0.8rem;">北京大学培育基金 · 3万元</div>
+                </div>
+            </div>
+        </div>
+        <div class="section-card reveal">
+            <div class="card-header">
+                <div class="card-icon">🏥</div>
+                <div>
+                    <h3>Therapeutic Areas</h3>
+                    <div class="card-header-cn cn">治疗领域</div>
+                </div>
+            </div>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.75rem;">
+                <div style="padding:0.75rem; background:var(--slate-50); border-radius:var(--radius-sm); text-align:center;">
+                    <div style="font-size:0.82rem; font-weight:600; color:var(--navy-700);">Depression</div>
+                    <div class="cn" style="font-size:0.72rem; color:var(--slate-500);">抑郁症</div>
+                </div>
+                <div style="padding:0.75rem; background:var(--slate-50); border-radius:var(--radius-sm); text-align:center;">
+                    <div style="font-size:0.82rem; font-weight:600; color:var(--navy-700);">Insomnia</div>
+                    <div class="cn" style="font-size:0.72rem; color:var(--slate-500);">失眠症</div>
+                </div>
+                <div style="padding:0.75rem; background:var(--slate-50); border-radius:var(--radius-sm); text-align:center;">
+                    <div style="font-size:0.82rem; font-weight:600; color:var(--navy-700);">ADHD</div>
+                    <div class="cn" style="font-size:0.72rem; color:var(--slate-500);">注意缺陷多动障碍</div>
+                </div>
+                <div style="padding:0.75rem; background:var(--slate-50); border-radius:var(--radius-sm); text-align:center;">
+                    <div style="font-size:0.82rem; font-weight:600; color:var(--navy-700);">Suicide Risk</div>
+                    <div class="cn" style="font-size:0.72rem; color:var(--slate-500);">自杀风险</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h3 style="font-family:'Cormorant Garamond',serif; font-size:1.35rem; font-weight:600; color:var(--navy-800); margin-bottom:1rem;" class="reveal">
+        Clinical Trials Led or Participated
+        <span class="cn-only" style="font-size:0.9rem; font-weight:400; color:var(--slate-500); font-family:'Noto Serif SC',serif;"> · 主导或参与临床试验</span>
+    </h3>
+    <div class="table-wrap reveal">
+        <table class="trials-table">
+            <thead>
+                <tr>
+                    <th style="width:55%;">Project <span class="cn-only">/ 项目</span></th>
+                    <th style="width:20%;">Phase <span class="cn-only">/ 分期</span></th>
+                    <th style="width:25%;">Role <span class="cn-only">/ 角色</span></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        iPSC-derived exosome nasal spray in depression (RCT)<br>
+                        <span class="cn-only cn" style="color:var(--slate-500); font-size:0.8rem;">iPSC来源外泌体鼻喷雾治疗抑郁症</span>
+                    </td>
+                    <td><span class="phase-tag">Lead PI</span></td>
+                    <td class="role-pi">Lead PI · 主要研究者</td>
+                </tr>
+                <tr>
+                    <td>
+                        KH607 tablet for depression<br>
+                        <span class="cn-only cn" style="color:var(--slate-500); font-size:0.8rem;">KH607片治疗抑郁症</span>
+                    </td>
+                    <td><span class="phase-tag">Phase II</span></td>
+                    <td>Participant · 参与者</td>
+                </tr>
+                <tr>
+                    <td>
+                        (R)-ketamine nasal spray for treatment-resistant depression<br>
+                        <span class="cn-only cn" style="color:var(--slate-500); font-size:0.8rem;">(R)-氯胺酮鼻喷雾治疗难治性抑郁</span>
+                    </td>
+                    <td><span class="phase-tag">Phase II</span></td>
+                    <td>Participant · 参与者</td>
+                </tr>
+                <tr>
+                    <td>
+                        HS-10519 in MDD with acute suicidal ideation<br>
+                        <span class="cn-only cn" style="color:var(--slate-500); font-size:0.8rem;">HS-10519治疗伴急性自杀意念重度抑郁</span>
+                    </td>
+                    <td><span class="phase-tag">Phase I/II</span></td>
+                    <td>Participant · 参与者</td>
+                </tr>
+                <tr>
+                    <td>
+                        Lisdexamfetamine for ADHD<br>
+                        <span class="cn-only cn" style="color:var(--slate-500); font-size:0.8rem;">赖右苯丙胺治疗注意缺陷多动障碍</span>
+                    </td>
+                    <td><span class="phase-tag">Phase III</span></td>
+                    <td>Participant · 参与者</td>
+                </tr>
+                <tr>
+                    <td>
+                        SAL0114 tablets for depression (bupropion-controlled)<br>
+                        <span class="cn-only cn" style="color:var(--slate-500); font-size:0.8rem;">SAL0114片治疗抑郁症（安非他酮对照）</span>
+                    </td>
+                    <td><span class="phase-tag">Phase II</span></td>
+                    <td>Participant · 参与者</td>
+                </tr>
+                <tr>
+                    <td>
+                        Levomilnacipran SR for MDD (active-controlled)<br>
+                        <span class="cn-only cn" style="color:var(--slate-500); font-size:0.8rem;">左旋米那普仑缓释治疗重度抑郁</span>
+                    </td>
+                    <td><span class="phase-tag">Active-controlled</span></td>
+                    <td>Participant · 参与者</td>
+                </tr>
+                <tr>
+                    <td>
+                        (R)-ketamine nasal spray in MDD with suicidal ideation<br>
+                        <span class="cn-only cn" style="color:var(--slate-500); font-size:0.8rem;">(R)-氯胺酮鼻喷雾治疗伴自杀意念重度抑郁</span>
+                    </td>
+                    <td><span class="phase-tag">Phase II</span></td>
+                    <td>Participant · 参与者</td>
+                </tr>
+                <tr>
+                    <td>
+                        Comparative PK of esketamine injection vs. nasal spray<br>
+                        <span class="cn-only cn" style="color:var(--slate-500); font-size:0.8rem;">艾司氯胺酮注射剂与鼻喷剂PK比较</span>
+                    </td>
+                    <td><span class="phase-tag">PK Study</span></td>
+                    <td>Participant · 参与者</td>
+                </tr>
+                <tr>
+                    <td>
+                        Doxylamine succinate for short-term insomnia<br>
+                        <span class="cn-only cn" style="color:var(--slate-500); font-size:0.8rem;">琥珀酸多西拉敏治疗短期失眠</span>
+                    </td>
+                    <td><span class="phase-tag">Phase III</span></td>
+                    <td>Participant · 参与者</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</section>
+
+<section id="awards">
+<div class="section-wrap">
+    <div class="section-header reveal">
+        <div class="section-eyebrow">Recognition</div>
+        <h2 class="section-title">Awards &amp; Honors</h2>
+        <p class="section-subtitle cn">获奖与荣誉</p>
+        <div class="section-line"></div>
+    </div>
+    <div class="two-col">
+        <div class="section-card reveal">
+            <div class="card-header">
+                <div class="card-icon">🏆</div>
+                <div>
+                    <h3>Academic Awards</h3>
+                    <div class="card-header-cn cn">学术奖项</div>
+                </div>
+            </div>
+            <div class="timeline" style="padding-left:0; border:none;">
+                <div class="tl-item" style="border:none; padding-left:0; padding-bottom:1rem;">
+                    <div class="tl-title" style="font-size:0.9rem;">First Place, Beijing Region</div>
+                    <div class="tl-sub" style="font-size:0.82rem;">Case Presentation Competition on Drug-Induced Liver Disease</div>
+                    <div class="tl-desc-cn cn" style="font-size:0.8rem;">京津冀药物性肝病病例演讲比赛北京赛区一等奖</div>
+                </div>
+                <div class="tl-item" style="border:none; padding-left:0; padding-bottom:1rem;">
+                    <div class="tl-title" style="font-size:0.9rem;">National Graduate Scholarship</div>
+                    <div class="tl-sub" style="font-size:0.82rem;">Ministry of Education, China</div>
+                    <div class="tl-desc-cn cn" style="font-size:0.8rem;">研究生国家奖学金（教育部）</div>
+                </div>
+                <div class="tl-item" style="border:none; padding-left:0; padding-bottom:0;">
+                    <div class="tl-title" style="font-size:0.9rem;">University Scholarship × 6</div>
+                    <div class="tl-sub" style="font-size:0.82rem;">Six-time recipient</div>
+                    <div class="tl-desc-cn cn" style="font-size:0.8rem;">校级奖学金（6次）</div>
+                </div>
+            </div>
+        </div>
+        <div class="section-card reveal">
+            <div class="card-header">
+                <div class="card-icon">🎖️</div>
+                <div>
+                    <h3>Honors &amp; Distinctions</h3>
+                    <div class="card-header-cn cn">荣誉称号</div>
+                </div>
+            </div>
+            <div class="timeline" style="padding-left:0; border:none;">
+                <div class="tl-item" style="border:none; padding-left:0; padding-bottom:1rem;">
+                    <div class="tl-title" style="font-size:0.9rem;">Merit Student (Three Good Students)</div>
+                    <div class="tl-sub" style="font-size:0.82rem;">University Level</div>
+                    <div class="tl-desc-cn cn" style="font-size:0.8rem;">校级三好学生</div>
+                </div>
+                <div class="tl-item" style="border:none; padding-left:0; padding-bottom:1rem;">
+                    <div class="tl-title" style="font-size:0.9rem;">Outstanding Employee</div>
+                    <div class="tl-sub" style="font-size:0.82rem;">Peking University Sixth Hospital</div>
+                    <div class="tl-desc-cn cn" style="font-size:0.8rem;">北京大学第六医院优秀员工</div>
+                </div>
+                <div class="tl-item" style="border:none; padding-left:0; padding-bottom:0;">
+                    <div class="tl-title" style="font-size:0.9rem;">Third Prize · Young Faculty Lecture</div>
+                    <div class="tl-sub" style="font-size:0.82rem;">Peking University Sixth Hospital</div>
+                    <div class="tl-desc-cn cn" style="font-size:0.8rem;">北京大学第六医院青年教师讲课比赛三等奖</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+<section id="presentations" class="section-alt">
+<div class="section-wrap">
+    <div class="section-header reveal">
+        <div class="section-eyebrow">Presentations</div>
+        <h2 class="section-title">Academic Conferences</h2>
+        <p class="section-subtitle cn">学术会议报告</p>
+        <div class="section-line"></div>
+    </div>
+    <div class="pres-grid">
+        <div class="pres-card reveal">
+            <div class="pres-date-box">
+                <div class="pres-year">2026</div>
+                <div class="pres-month">Jun</div>
+            </div>
+            <div class="pres-body">
+                <div class="pres-title">37th World Congress of Neuropsychopharmacology (CINP)</div>
+                <span class="pres-type oral">Oral Presentation</span>
+                <span class="cn-only cn" style="font-size:0.75rem; color:var(--slate-400); margin-left:0.5rem;">口头报告</span>
+            </div>
+        </div>
+        <div class="pres-card reveal">
+            <div class="pres-date-box">
+                <div class="pres-year">2024</div>
+                <div class="pres-month">Nov</div>
+            </div>
+            <div class="pres-body">
+                <div class="pres-title">24th World Psychiatric Association (WPA) Congress</div>
+                <span class="pres-type oral">Oral Presentation</span>
+                <span class="cn-only cn" style="font-size:0.75rem; color:var(--slate-400); margin-left:0.5rem;">口头报告</span>
+            </div>
+        </div>
+        <div class="pres-card reveal">
+            <div class="pres-date-box">
+                <div class="pres-year">2023</div>
+                <div class="pres-month">Oct</div>
+            </div>
+            <div class="pres-body">
+                <div class="pres-title">World Sleep Congress 2023</div>
+                <span class="pres-type oral">Oral Presentation</span>
+                <span class="cn-only cn" style="font-size:0.75rem; color:var(--slate-400); margin-left:0.5rem;">口头报告</span>
+            </div>
+        </div>
+        <div class="pres-card reveal">
+            <div class="pres-date-box">
+                <div class="pres-year">2023</div>
+                <div class="pres-month">Sep</div>
+            </div>
+            <div class="pres-body">
+                <div class="pres-title">20th National Academic Congress of Psychiatry (CSP)</div>
+                <span class="pres-type poster">Poster</span>
+                <span class="cn-only cn" style="font-size:0.75rem; color:var(--slate-400); margin-left:0.5rem;">壁报交流</span>
+            </div>
+        </div>
+        <div class="pres-card reveal">
+            <div class="pres-date-box">
+                <div class="pres-year">2021</div>
+                <div class="pres-month">Dec</div>
+            </div>
+            <div class="pres-body">
+                <div class="pres-title">19th National Academic Congress of Psychiatry (CSP)</div>
+                <span class="pres-type poster">Poster</span>
+                <span class="cn-only cn" style="font-size:0.75rem; color:var(--slate-400); margin-left:0.5rem;">壁报交流</span>
+            </div>
+        </div>
+        <div class="pres-card reveal">
+            <div class="pres-date-box">
+                <div class="pres-year">2021</div>
+                <div class="pres-month">Jul</div>
+            </div>
+            <div class="pres-body">
+                <div class="pres-title">12th Annual Conference of Sleep Medicine</div>
+                <span class="pres-type oral">Oral Presentation</span>
+                <span class="cn-only cn" style="font-size:0.75rem; color:var(--slate-400); margin-left:0.5rem;">口头报告</span>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+<section id="contact">
+<div class="section-wrap">
+    <div class="section-header reveal">
+        <div class="section-eyebrow">Get in Touch</div>
+        <h2 class="section-title">Contact Information</h2>
+        <p class="section-subtitle cn">联系方式</p>
+        <div class="section-line"></div>
+    </div>
+    <div class="contact-grid">
+        <div class="contact-card reveal">
+            <div class="contact-icon">✉</div>
+            <div class="contact-label">Email <span class="cn-only">/ 邮箱</span></div>
+            <div class="contact-value"><a href="mailto:tianshanshan@mail.ccmu.edu.cn">tianshanshan@mail.ccmu.edu.cn</a></div>
+        </div>
+        <div class="contact-card reveal">
+            <div class="contact-icon">☎</div>
+            <div class="contact-label">Phone <span class="cn-only">/ 电话</span></div>
+            <div class="contact-value">+86 13621202449</div>
+        </div>
+        <div class="contact-card reveal">
+            <div class="contact-icon">⌂</div>
+            <div class="contact-label">Affiliation <span class="cn-only">/ 单位</span></div>
+            <div class="contact-value" style="font-size:0.85rem;">Beijing Anding Hospital<br>Capital Medical University</div>
+        </div>
+    </div>
+    <div class="about-grid">
+        <div class="about-card reveal">
+            <h3>Current Position</h3>
+            <p>Beijing Anding Hospital, Capital Medical University<br>Postdoctoral Fellow · Associate Chief Pharmacist<br>Clinical Trial Design &amp; Psychopharmacology Research</p>
+        </div>
+        <div class="about-card cn reveal">
+            <h3 class="cn">现任职位</h3>
+            <p class="cn">首都医科大学附属北京安定医院<br>博士后 · 副主任药师<br>临床试验设计 · 精神药理学研究</p>
+        </div>
+    </div>
+</div>
+</section>
+
+<footer>
+    <div class="footer-name serif">Shanshan Tian, Ph.D. <span class="cn-only cn">· 田姗姗</span></div>
+    <div class="footer-title">Associate Chief Pharmacist · Psychiatry Research &amp; Clinical Pharmacology</div>
+    <div class="footer-divider"></div>
+    <div class="footer-copy">© 2026 Shanshan Tian. All rights reserved.</div>
+</footer>
+
+<button class="to-top" id="toTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
+
+<script>
+const progressBar = document.getElementById('scrollProgress');
+const navbar = document.getElementById('navbar');
+const toTop = document.getElementById('toTop');
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-link');
+
+function updateScroll() {
+    const scrolled = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = (scrolled / docHeight) * 100;
+    progressBar.style.width = progress + '%';
+    if (scrolled > 20) navbar.classList.add('scrolled');
+    else navbar.classList.remove('scrolled');
+    if (scrolled > 400) toTop.classList.add('visible');
+    else toTop.classList.remove('visible');
+    let current = '';
+    sections.forEach(sec => {
+        const top = sec.offsetTop - 100;
+        if (scrolled >= top) current = sec.id;
+    });
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.dataset.section === current) link.classList.add('active');
+    });
+}
+window.addEventListener('scroll', updateScroll, { passive: true });
+updateScroll();
+
+function toggleMobileMenu() {
+    document.getElementById('navLinks').classList.toggle('mobile-open');
+}
+document.querySelectorAll('#navLinks a').forEach(a => {
+    a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('mobile-open'));
+});
+
+document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        document.body.className = 'lang-' + btn.dataset.lang;
+    });
+});
+
+const reveals = document.querySelectorAll('.reveal');
+const obs = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+        if (e.isIntersecting) {
+            setTimeout(() => e.target.classList.add('in-view'), i * 40);
+            obs.unobserve(e.target);
+        }
+    });
+}, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+reveals.forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
